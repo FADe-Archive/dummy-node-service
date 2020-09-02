@@ -2,6 +2,8 @@
 const process = require('process');
 let interval = 1000;
 
+if(typeof process.argv[2] == "string") interval = parseInt(process.argv[2]);
+
 function info(sig) {
     console.log(`Got ${sig}`);
     process.exit(1);
